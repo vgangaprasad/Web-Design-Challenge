@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weather Data Analysis</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<header class="header">
+<!-- Sidebar (hidden by default) -->
+  <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+    class="w3-bar-item w3-button">Close Menu</a>
+    <!--<a href="#visualization" onclick="w3_close()" class="w3-bar-item w3-button">Visualization</a> -->
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+    <a href="lat_vs_max_temp.html" onclick="w3_close()" class="w3-bar-item w3-button">Latitude vs Max Temperature</a>
+    <a href="lat_vs_humidity.html" onclick="w3_close()" class="w3-bar-item w3-button">Latitude vs Humidity</a>
+    <a href="lat_vs_cloudiness.html" onclick="w3_close()" class="w3-bar-item w3-button">Latitude vs Cloudiness</a>
+    <a href="lat_vs_wind_speed.html" onclick="w3_close()" class="w3-bar-item w3-button">Latitude vs Wind Speed</a>
+    <a href="comparison.html" onclick="w3_close()" class="w3-bar-item w3-button">Comparison</a>
+    <a href="data.html" onclick="w3_close()" class="w3-bar-item w3-button">Comparison</a>
+  </nav>
+
+
+  <div class="w3-top">
+      <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">&#9776;</div>
+        <div class="w3-right w3-padding-16">
+            <a href="mailto:vijay.gangaprasad@outlook.com">
+              Mail
+            </a>
+          </div>
+        <div class="w3-center w3-padding-16">Weather Data Analysis around Equator</div>
+      </div>
+  </div>
+  
+  <hr>
+
+  <!-- Top menu -->
+
+  <div class="container">
+    <hr id="viz">
+    <div class="row">
+   
+      <div class="col-lg-9 banner-info">
+        <h1>Latitude vs Wind Speed</h1>
+          <img src="Images/lat_vs_wind_speed.png" class="img-responsive">
+          <p>
+              Data's true power lies in its ability to answer questions definitively. 
+              I have used Python requests, OpenWeatherMap APIs, and JSON traversals to 
+              assemble data over 500 cities and answer a fundamental question: 
+              " Is the Wind Speed more/less closer to the Equator compared to away from Equator?" 
+              Please check the image and answer for yourself.
+          </p>
+      </div>
+
+      <div class="col-sm-3 banner-image text-center">
+          <img src="Images/lat_vs_max_temp.png" class="img-responsive">
+          <a href="lat_vs_max_temp.html">Latitude vs Max Temperature</a>
+        </div>
+  
+      <div class="col-sm-3 banner-image text-center">
+        <img src="Images/lat_vs_humidity.png" class="img-responsive">
+        <a href="lat_vs_humidity.html">Latitude vs Humidity</a>
+      </div>
+
+      <div class="col-sm-3 banner-image text-center">
+        <img src="Images/lat_vs_cloudiness.png" class="img-responsive">
+          <a href="lat_vs_cloudiness.html">Latitude vs Cloudiness</a>
+      </div>
+
+    </div>
+  </div>
+</header>  
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    </script>
+    
+</body>
+
+</html>
+
